@@ -9,6 +9,17 @@ def add(a: int, b: int) -> int:
     """Adds two integer numbers together."""
     return a + b
 
+@mcp.tool
+def echo(message: str) -> str:
+    """Echoes the same message back."""
+    return message
+
+@mcp.tool
+def uppercase(message: str) -> str:
+    """Converts the message to uppercase."""
+    return message.upper()
+
+
 # Define a resource using the @mcp.resource decorator
 @mcp.resource("greetings://{name}")
 def personalized_greeting(name: str) -> str:
